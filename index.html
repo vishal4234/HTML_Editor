@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Editor</title>
+    <!-- CodeMirror CSS (Material Darker Theme for VS Code look) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/material-darker.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CodeMirror Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/xml/xml.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Editor</h1>
+    </header>
+
+    <div class="editor-container">
+
+        <div class="panel" id="editor-panel">
+
+            <!-- Tabs Panel -->
+            <div class="tabs">
+                <div class="tab active" data-mode="htmlmixed" data-content="html">
+                    <span>index.html</span>
+                </div>
+                <div class="tab" data-mode="css" data-content="css">
+                    <span>style.css</span>
+                </div>
+                <div class="tab" data-mode="javascript" data-content="js">
+                    <span>script.js</span>
+                </div>
+            </div>
+
+            <!-- Code Editor -->
+            <textarea id="html-code" placeholder="Enter your HTML code here..."></textarea>
+
+        </div>
+
+        <div class="resizer" id="resizer"></div>
+
+        <div class="panel">
+            <iframe id="preview"></iframe>
+        </div>
+        
+    </div>
+    <!-- CodeMirror Initialization and Functionality -->
+    <script src="./script.js"></script>
+</body>
+</html>
